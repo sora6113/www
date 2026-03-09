@@ -26,6 +26,14 @@ nav {
 .nav-list {
     width: 40%;
     height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+
+#bars, #x {
+    display: none;
 }
 
 .nav-list ul {
@@ -46,6 +54,38 @@ nav {
 .nav-list ul li a:hover {
     color: #FF88BA;
     background-color: #66D0BC;
+}
+
+.menu-list {
+    position: relative;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items:center;
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: 70px;
+    right: -20px;
+    width: 120px;
+    height: 190px;
+    z-index: 5;
+    background-color: #3A8B95;
+    background-color:rgba(58, 139, 149, 0.7) ;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+}
+
+.menu-dropdown a {
+    text-decoration: none;
+    color: #FF3E9B;
+}
+
+.menu-dropdown ul {
+    list-style: none;
 }
 
 .cover-img {
@@ -102,8 +142,7 @@ nav {
 }
 
 .rose .flower-card:hover  {
-    width: 253px;
-    height: 303px;
+    transform: scale(1.05);
     transition: 0.2s;
 }
 
@@ -138,4 +177,51 @@ footer {
     align-items: center;
     border-top: 1px solid grey;
     background: #3A8B95;
+}
+
+@media (max-width: 700px) {
+    #bars, #x {
+        display: none;
+    }
+}
+
+@media  (max-width: 520px) {
+
+    .nav-list {
+        justify-content: end;
+    }
+
+    .nav-list ul{
+        display: none;
+    }
+
+    #bars {
+        display: block;
+    }
+
+    .rose{
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .flower-card {
+        margin: 10px;
+    }
+
+    .cover-text{
+        width:90%;
+        left:5%;
+    }
+
+    .cover-text h2 {
+        font-size: 32px;
+    }
+
+    .cover-text p {
+        font-size: 18px;
+    }
+
+    footer p{
+        font-size: 12px;
+    }
 }
