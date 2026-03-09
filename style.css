@@ -84,6 +84,10 @@ nav {
     border-bottom: 1px solid #66D0BC;
 }
 
+.head-line h1 {
+    color:#FF3E9B;
+}
+
 .rose {
     width: 100%;
     display: flex;
@@ -97,9 +101,10 @@ nav {
     color: #FF3E9B;
 }
 
-.rose a:hover .flower-card {
+.rose .flower-card:hover  {
     width: 253px;
     height: 303px;
+    transition: 0.2s;
 }
 
 .flower-card {
