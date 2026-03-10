@@ -60,7 +60,7 @@ nav {
     position: relative;
     height: 100%;
     padding: 0 20px;
-    display: flex;
+    display: none;
     align-items:center;
 }
 
@@ -79,6 +79,10 @@ nav {
     display: none;
 }
 
+.menu-dropdown.active {
+    display: block;
+}
+
 .menu-dropdown a {
     text-decoration: none;
     color: #FF3E9B;
@@ -86,6 +90,10 @@ nav {
 
 .menu-dropdown ul {
     list-style: none;
+}
+
+.menu-dropdown li {
+    margin: 20px 0;
 }
 
 .cover-img {
@@ -177,6 +185,7 @@ footer {
     align-items: center;
     border-top: 1px solid grey;
     background: #3A8B95;
+    color: #FF3E9B;
 }
 
 @media (max-width: 700px) {
@@ -195,7 +204,15 @@ footer {
         display: none;
     }
 
-    #bars {
+    .menu-list {
+        display: flex;
+    }
+
+    #bars.active {
+    display: block;
+    }
+
+    #x.active {
         display: block;
     }
 
